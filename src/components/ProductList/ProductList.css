@@ -1,0 +1,298 @@
+/* For Background Slide */
+.banner {
+    width: 96%;
+    height: 859px;
+    margin: auto;
+    margin-block: 2%;
+    border-radius: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.7s ease-in-out;
+    position: relative;
+    animation: zoomBg 20s ease-in-out infinite;
+}
+
+@keyframes zoomBg {
+
+    0%,
+    100% {
+        background-size: 100%;
+    }
+
+    50% {
+        background-size: 110%;
+    }
+}
+
+/* For Background Slide */
+
+.txt-banner {
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 40%;
+    left: 7%;
+    gap: 35px;
+}
+
+.txt-banner h1 {
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.txt-banner p {
+    font-size: 17px;
+    color: #d4d4d4ee;
+    letter-spacing: 2px;
+}
+
+.txt-banner button {
+    background-color: palevioletred;
+    width: 30%;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 35px;
+    padding: 17px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.txt-banner button:hover {
+    background-color: white;
+    color: black;
+}
+
+.swiper-box {
+    padding: 8px 18px;
+    font-size: 13px;
+    outline: 2px solid white;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 19%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swiper-box:hover {
+    background-color: palevioletred;
+}
+
+.swiper-box i {
+    margin-top: 5px;
+}
+
+.swiper-box p {
+    font-size: 14px;
+}
+
+.swiper-box.previous {
+    left: 7%;
+}
+
+.swiper-box.next {
+    right: 7%;
+}
+
+.product-title {
+    width: 34%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.product-title p {
+    font-size: 19px;
+    color: #d4d4d4ee;
+}
+
+.product-navbar ul {
+    width: 35%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-block: 50px;
+    padding-block: 25px;
+    border-radius: 55px;
+    gap: 75px;
+    /* background-color: #ffffff31; */
+}
+
+.product-navbar ul li {
+    width: 15%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s;
+    position: relative;
+    gap: 9px;
+}
+
+.product-navbar ul li::after {
+    content: '';
+    width: 0%;
+    position: absolute;
+    height: 5px;
+    border-radius: 17px;
+    background: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.product-navbar ul li.pro-active::after {
+    width: 100%;
+}
+
+.product-navbar ul li img {
+    height: 95px;
+}
+
+.sub-title {
+    width: 80%;
+    margin: auto;
+    padding: 17px 29px;
+    margin-block: 35px;
+    color: rgb(255, 255, 255);
+    background: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.sub-title h2 {
+    font-size: 1.5em;
+    line-height: 1.1;
+    padding-bottom: 9px;
+}
+
+.sub-title .sub-txt p {
+
+    color: #d4d4d4ee;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sub-title .view-all {
+    font-size: 17px;
+    outline: 1px solid white;
+    border-radius: 35px;
+    padding: 14px 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.sub-title .view-all:hover {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 470px;
+        margin: 0;
+    }
+
+    .txt-banner {
+        max-width: 90%;
+        top: 45%;
+        left: 5%;
+        transform: translate(0, -50%);
+        gap: 7px;
+    }
+
+    .txt-banner h1 {
+        font-size: 28px;
+    }
+
+    .txt-banner p {
+        display: none;
+    }
+
+    .txt-banner button {
+        width: 50%;
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+    .swiper-box {
+        font-size: 12px;
+        padding: 5px 19px;
+        bottom: 31%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-box p {
+        display: none;
+    }
+
+    .swiper-box i {
+        margin: 0;
+    }
+
+    .product-title {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .product-title p {
+        font-size: 16px;
+    }
+
+    .product-navbar ul {
+        width: 95%;
+        gap: 25px;
+    }
+
+    .product-navbar ul li {
+        width: 30%;
+        font-size: 18px;
+        gap: 6px;
+    }
+
+    .product-navbar ul li img {
+        height: 55px;
+    }
+
+    .sub-title {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .sub-title h2 {
+        font-size: 1.2em;
+    }
+
+    .sub-title .sub-txt p {
+        font-size: 14px;
+    }
+
+    .sub-title .view-all {
+        padding: 10px 25px;
+        font-size: 15px;
+        align-self: flex-end;
+    }
+}
