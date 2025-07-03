@@ -9,7 +9,6 @@ const Home = () => {
     <div>
         <ProductList category={category} setCategory={setCategory}/>
         <DisplayPro category={category}/>
-
     </div>
   )
 }
